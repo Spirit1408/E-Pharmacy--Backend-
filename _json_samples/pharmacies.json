@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Pharmacy Hope",
+    "address": "Shevchenka St, 100",
+    "city": "Lviv",
+    "phone": "0322-45-67-89",
+    "rating": 4
+  },
+  {
+    "name": "Pharmakor",
+    "address": "Hoholia St, 24",
+    "city": "Kharkiv",
+    "phone": "0572-58-22-12",
+    "rating": 3
+  },
+  {
+    "name": "Aesculap",
+    "address": "Peace Ave, 5",
+    "city": "Dnipro",
+    "phone": "056-744-55-66",
+    "rating": 5
+  },
+  {
+    "name": "Balsam",
+    "address": "Soborna St, 14",
+    "city": "Rivne",
+    "phone": "0362-62-33-44",
+    "rating": 3
+  },
+  {
+    "name": "Med-Service",
+    "address": "Lesi Ukrainki St, 78",
+    "city": "Zaporizhzhia",
+    "phone": "0612-34-56-78",
+    "rating": 4
+  },
+  {
+    "name": "Pharmacy",
+    "address": "Freedom Ave, 120",
+    "city": "Ternopil",
+    "phone": "0352-52-43-21",
+    "rating": 3
+  },
+  {
+    "name": "Pharmacy 24",
+    "address": "Kyivska St, 48",
+    "city": "Cherkasy",
+    "phone": "0472-35-67-89",
+    "rating": 4
+  },
+  {
+    "name": "Good Medicines",
+    "address": "Independence St, 67",
+    "city": "Ivano-Frankivsk",
+    "phone": "0342-50-60-70",
+    "rating": 5
+  },
+  {
+    "name": "Plantain",
+    "address": "Petlyury St, 29",
+    "city": "Vinnytsia",
+    "phone": "0432-65-88-99",
+    "rating": 4
+  },
+  {
+    "name": "Pharmacy Plus",
+    "address": "Dovzhenka St, 3",
+    "city": "Lutsk",
+    "phone": "0332-78-90-10",
+    "rating": 3
+  },
+  {
+    "name": "Med-Medicines",
+    "address": "Kosmonavtiv St, 12",
+    "city": "Mykolaiv",
+    "phone": "0512-47-58-69",
+    "rating": 2
+  },
+  {
+    "name": "Pharmaland",
+    "address": "Gagarin Ave, 17",
+    "city": "Kherson",
+    "phone": "0552-49-50-60",
+    "rating": 4
+  },
+  {
+    "name": "Medicines from the Heart",
+    "address": "Starokyivska St, 5",
+    "city": "Chernihiv",
+    "phone": "0462-67-89-90",
+    "rating": 5
+  },
+  {
+    "name": "Good Day Pharmacy",
+    "address": "Halytska St, 23",
+    "city": "Chernivtsi",
+    "phone": "0372-55-66-77",
+    "rating": 4
+  },
+  {
+    "name": "Health",
+    "address": "Stepana Bandery St, 56",
+    "city": "Uzhhorod",
+    "phone": "0312-61-62-63",
+    "rating": 3
+  },
+  {
+    "name": "Panacea",
+    "address": "Chervonoi Kalyny Ave, 76",
+    "city": "Lviv",
+    "phone": "032-245-76-88",
+    "rating": 2
+  },
+  {
+    "name": "Pharmplanet",
+    "address": "Ostrozkoho St, 37",
+    "city": "Poltava",
+    "phone": "0532-60-71-82",
+    "rating": 5
+  },
+  {
+    "name": "Pharmacy Penny",
+    "address": "Krymskoho St, 18",
+    "city": "Simferopol",
+    "phone": "0652-51-62-73",
+    "rating": 4
+  },
+  {
+    "name": "Pharmacy 36.6",
+    "address": "Hrushevskoho St, 4",
+    "city": "Kyiv",
+    "phone": "044-501-36-86",
+    "rating": 3
+  },
+  {
+    "name": "Vitafarm",
+    "address": "Studentska St, 12",
+    "city": "Sumy",
+    "phone": "0542-67-88-99",
+    "rating": 5
+  }
+]
