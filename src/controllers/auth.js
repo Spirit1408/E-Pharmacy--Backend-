@@ -1,6 +1,7 @@
 import { THIRTY_DAYS } from '../constants/index.js';
 import { UsersCollection } from '../db/models/user.js';
 import {
+  getUserInfo,
   loginUser,
   logoutUser,
   refreshUserSession,
@@ -79,4 +80,10 @@ export const getServerStatusController = (req, res) => {
   res.status(200).json({
     message: 'Server is running',
   });
+};
+
+export const getUserInfoController = async (req, res) => {
+  const user = await getUserInfo(req.cookies.sessionId);
+
+  res.status(200).json({ status: 200, message: 'User info', data: user });
 };
