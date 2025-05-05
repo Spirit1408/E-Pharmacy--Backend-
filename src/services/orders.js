@@ -1,12 +1,23 @@
 import Order from '../db/models/order.js';
+import { calculatePaginationData } from '../utils/calculatePaginationData.js';
 
-export const getOrders = async (filter = {}) => {
+export const getOrders = async (filter = {}, page = 1, limit = 5) => {
   const query = {};
   
   if (filter.name) {
     query.name = { $regex: filter.name, $options: 'i' };
   }
-  
-  return await Order.find(query)
-    .select('photo name address products price status order_date');
+
+  const skip = (page - 1) * limit;
+
+  const total = await Order.countDocuments(query);
+
+  const orders = await Order.find(query)
+    .select('photo name address products price status order_date')
+    .skip(skip)
+    .limit(limit);
+
+  const pagination = calculatePaginationData(total, limit, page);
+
+  return { orders, pagination };
 };
