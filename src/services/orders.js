@@ -13,7 +13,6 @@ export const getOrders = async (filter = {}, page = 1, limit = 5) => {
   const total = await Order.countDocuments(query);
 
   const orders = await Order.find(query)
-    .select('photo name address products price status order_date')
     .skip(skip)
     .limit(limit);
 

@@ -13,7 +13,6 @@ export const getProducts = async (filter = {}, page = 1, limit = 5) => {
   const total = await Product.countDocuments(query);
 
   const products = await Product.find(query)
-    .select('photo name suppliers stock price category')
     .skip(skip)
     .limit(limit);
 
