@@ -19,7 +19,7 @@ export const getLatestCustomers = async (limit = 5) => {
   return await Customer.find()
     .sort({ register_date: -1 })
     .limit(limit)
-    .select('photo name email spent phone address register_date');
+    .select('image name email spent');
 };
 
 export const getLatestExpenses = async (limit = 6) => {
