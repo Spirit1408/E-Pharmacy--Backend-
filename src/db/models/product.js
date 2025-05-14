@@ -1,30 +1,38 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model } from "mongoose";
 
 const productSchema = new Schema(
-  {
-    photo: {
-      type: String,
-    },
-    name: {
-      type: String,
-    },
-    suppliers: {
-      type: String,
-    },
-    stock: {
-      type: Number,
-    },
-    price: {
-      type: Number,
-    },
-    category: {
-      type: String,
-      enum: ['Medicine', 'Heart', 'Leg', 'Head', 'Hand'],
-    },
-  },
-  { versionKey: false, timestamps: false }
+	{
+		photo: {
+			type: String,
+		},
+		name: {
+			type: String,
+		},
+		suppliers: {
+			type: String,
+		},
+		stock: {
+			type: String,
+		},
+		price: {
+			type: String,
+		},
+		category: {
+			type: String,
+			enum: [
+				"Medicine",
+				"Heart",
+				"Leg",
+				"Head",
+				"Hand",
+				"Dental care",
+				"Skin care",
+			],
+		},
+	},
+	{ versionKey: false, timestamps: false },
 );
 
-const Product = model('products', productSchema);
+const Product = model("products", productSchema);
 
 export default Product;
