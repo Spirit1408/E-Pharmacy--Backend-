@@ -2,9 +2,9 @@ import { getCustomers, getCustomerById } from '../services/customers.js';
 
 export const getCustomersController = async (req, res) => {
   const { name, page = 1, limit = 5 } = req.query;
-  
+
   const filter = {};
-  
+
   if (name) {
     filter.name = name;
   }
@@ -25,9 +25,9 @@ export const getCustomersController = async (req, res) => {
       message: 'Invalid limit parameter',
     });
   }
-  
+
   const result = await getCustomers(filter, pageNum, limitNum);
-  
+
   res.json({
     status: 200,
     message: 'Customers list',
@@ -38,12 +38,12 @@ export const getCustomersController = async (req, res) => {
 
 export const getCustomerByIdController = async (req, res) => {
   const { customerId } = req.params;
-  
+
   const customer = await getCustomerById(customerId);
-  
+
   res.json({
     status: 200,
     message: 'Customer info',
-    data: customer
+    data: customer,
   });
 };

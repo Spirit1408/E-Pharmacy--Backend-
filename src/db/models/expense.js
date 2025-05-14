@@ -13,7 +13,7 @@ const expenseSchema = new Schema(
       enum: ['Income', 'Expense', 'Error'],
     },
   },
-  { versionKey: false, timestamps: false }
+  { versionKey: false, timestamps: false },
 );
 
 const Expense = model('expenses', expenseSchema);

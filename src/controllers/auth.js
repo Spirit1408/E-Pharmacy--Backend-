@@ -29,7 +29,7 @@ export const loginUserController = async (req, res) => {
     sameSite: 'none',
     expires: new Date(Date.now() + THIRTY_DAYS),
   });
-  
+
   res.cookie('refreshToken', session.refreshToken, {
     httpOnly: true,
     secure: true,
@@ -54,15 +54,15 @@ export const refreshUserController = async (req, res) => {
 
   res.cookie('sessionId', session._id, {
     httpOnly: true,
-    secure: true, 
-    sameSite: 'none', 
+    secure: true,
+    sameSite: 'none',
     expires: new Date(Date.now() + THIRTY_DAYS),
   });
-  
+
   res.cookie('refreshToken', session.refreshToken, {
     httpOnly: true,
-    secure: true, 
-    sameSite: 'none', 
+    secure: true,
+    sameSite: 'none',
     expires: new Date(Date.now() + THIRTY_DAYS),
   });
 

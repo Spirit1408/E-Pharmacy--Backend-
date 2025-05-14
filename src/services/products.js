@@ -3,7 +3,7 @@ import { calculatePaginationData } from '../utils/calculatePaginationData.js';
 
 export const getProducts = async (filter = {}, page = 1, limit = 5) => {
   const query = {};
-  
+
   if (filter.name) {
     query.name = { $regex: filter.name, $options: 'i' };
   }
@@ -12,9 +12,7 @@ export const getProducts = async (filter = {}, page = 1, limit = 5) => {
 
   const total = await Product.countDocuments(query);
 
-  const products = await Product.find(query)
-    .skip(skip)
-    .limit(limit);
+  const products = await Product.find(query).skip(skip).limit(limit);
 
   const pagination = calculatePaginationData(total, limit, page);
 
@@ -27,26 +25,25 @@ export const addNewProduct = async (productData) => {
 };
 
 export const updateProduct = async (productId, productData) => {
+  const updatedProduct = await Product.findByIdAndUpdate(
+    productId,
+    productData,
+    { new: true },
+  );
 
-    const updatedProduct = await Product.findByIdAndUpdate(
-      productId,
-      productData,
-      { new: true }
-    );
-    
-    if (!updatedProduct) {
-      throw new Error('Product not found');
-    }
-    
-    return updatedProduct;
+  if (!updatedProduct) {
+    throw new Error('Product not found');
+  }
+
+  return updatedProduct;
 };
 
 export const deleteProduct = async (productId) => {
   const deletedProduct = await Product.findByIdAndDelete(productId);
-  
+
   if (!deletedProduct) {
     throw new Error('Product not found');
   }
-  
+
   return deletedProduct;
 };

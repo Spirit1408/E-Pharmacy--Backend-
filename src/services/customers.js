@@ -3,7 +3,7 @@ import { calculatePaginationData } from '../utils/calculatePaginationData.js';
 
 export const getCustomers = async (filter = {}, page = 1, limit = 5) => {
   const query = {};
-  
+
   if (filter.name) {
     query.name = { $regex: filter.name, $options: 'i' };
   }
@@ -12,9 +12,7 @@ export const getCustomers = async (filter = {}, page = 1, limit = 5) => {
 
   const total = await Customer.countDocuments(query);
 
-  const customers = await Customer.find(query)
-    .skip(skip)
-    .limit(limit);
+  const customers = await Customer.find(query).skip(skip).limit(limit);
 
   const pagination = calculatePaginationData(total, limit, page);
 
@@ -23,10 +21,10 @@ export const getCustomers = async (filter = {}, page = 1, limit = 5) => {
 
 export const getCustomerById = async (customerId) => {
   const customer = await Customer.findById(customerId);
-  
+
   if (!customer) {
     throw new Error('Customer not found');
   }
-  
+
   return customer;
 };

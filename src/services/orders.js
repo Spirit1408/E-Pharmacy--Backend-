@@ -3,7 +3,7 @@ import { calculatePaginationData } from '../utils/calculatePaginationData.js';
 
 export const getOrders = async (filter = {}, page = 1, limit = 5) => {
   const query = {};
-  
+
   if (filter.name) {
     query.name = { $regex: filter.name, $options: 'i' };
   }
@@ -12,9 +12,7 @@ export const getOrders = async (filter = {}, page = 1, limit = 5) => {
 
   const total = await Order.countDocuments(query);
 
-  const orders = await Order.find(query)
-    .skip(skip)
-    .limit(limit);
+  const orders = await Order.find(query).skip(skip).limit(limit);
 
   const pagination = calculatePaginationData(total, limit, page);
 

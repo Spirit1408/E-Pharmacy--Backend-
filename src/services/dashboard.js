@@ -23,7 +23,5 @@ export const getLatestCustomers = async (limit = 5) => {
 };
 
 export const getLatestExpenses = async (limit = 6) => {
-  return await Expense.find()
-    .limit(limit)
-    .select('name amount type');
+  return await Expense.find().limit(limit).select('name amount type');
 };

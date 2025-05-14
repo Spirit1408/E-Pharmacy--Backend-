@@ -1,10 +1,14 @@
-import { getSuppliers, addNewSupplier, updateSupplier } from '../services/suppliers.js';
+import {
+  getSuppliers,
+  addNewSupplier,
+  updateSupplier,
+} from '../services/suppliers.js';
 
 export const getSuppliersController = async (req, res) => {
   const { name, page = 1, limit = 5 } = req.query;
-  
+
   const filter = {};
-  
+
   if (name) {
     filter.name = name;
   }
@@ -25,9 +29,9 @@ export const getSuppliersController = async (req, res) => {
       message: 'Invalid limit number',
     });
   }
-  
+
   const result = await getSuppliers(filter, pageNum, limitNum);
-  
+
   res.json({
     status: 200,
     message: 'Suppliers list',
@@ -38,25 +42,25 @@ export const getSuppliersController = async (req, res) => {
 
 export const addNewSupplierController = async (req, res) => {
   const supplierData = req.body;
-  
+
   const newSupplier = await addNewSupplier(supplierData);
-  
+
   res.status(201).json({
     status: 201,
     message: 'Supplier added successfully',
-    data: newSupplier
+    data: newSupplier,
   });
 };
 
 export const updateSupplierController = async (req, res) => {
   const { supplierId } = req.params;
   const supplierData = req.body;
-  
+
   const updatedSupplier = await updateSupplier(supplierId, supplierData);
-  
+
   res.json({
     status: 200,
     message: 'Supplier updated successfully',
-    data: updatedSupplier
+    data: updatedSupplier,
   });
 };

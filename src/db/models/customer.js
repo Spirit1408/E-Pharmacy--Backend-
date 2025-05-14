@@ -24,7 +24,7 @@ const customerSchema = new Schema(
       type: String,
     },
   },
-  { versionKey: false, timestamps: false }
+  { versionKey: false, timestamps: false },
 );
 
 const Customer = model('customers', customerSchema);

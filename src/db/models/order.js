@@ -19,13 +19,21 @@ const orderSchema = new Schema(
     },
     status: {
       type: String,
-      enum: ['Completed', 'Confirmed', 'Pending', 'Processing', 'Shipped', 'Delivered', 'Cancelled'],
+      enum: [
+        'Completed',
+        'Confirmed',
+        'Pending',
+        'Processing',
+        'Shipped',
+        'Delivered',
+        'Cancelled',
+      ],
     },
     order_date: {
       type: String,
     },
   },
-  { versionKey: false, timestamps: false }
+  { versionKey: false, timestamps: false },
 );
 
 const Order = model('orders', orderSchema);

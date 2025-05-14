@@ -22,7 +22,7 @@ const supplierSchema = new Schema(
       enum: ['Active', 'Deactive'],
     },
   },
-  { versionKey: false, timestamps: false }
+  { versionKey: false, timestamps: false },
 );
 
 const Supplier = model('suppliers', supplierSchema);
