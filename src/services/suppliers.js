@@ -20,15 +20,11 @@ export const getSuppliers = async (filter = {}, page = 1, limit = 5) => {
 };
 
 export const addNewSupplier = async (supplierData) => {
-	supplierData.amount = `৳ ${supplierData.amount}`;
-
 	const newSupplier = await Supplier.create(supplierData);
 	return newSupplier;
 };
 
 export const updateSupplier = async (supplierId, supplierData) => {
-	supplierData.amount = `৳ ${supplierData.amount}`;
-
 	const updatedSupplier = await Supplier.findByIdAndUpdate(
 		supplierId,
 		supplierData,
