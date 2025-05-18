@@ -20,7 +20,7 @@ export const startServer = () => {
         'http://127.0.0.1:5173',
         'http://localhost:5174',
         'http://127.0.0.1:5174',
-        'https://e-pharmacy-frontend-sooty.vercel.app/'
+        'https://e-pharmacy-frontend-sooty.vercel.app'
       ],
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
